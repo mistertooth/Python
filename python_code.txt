@@ -1,0 +1,47 @@
+Python Code
+# BASIC CONCEPTS
+
+# Series VS DataFrame
+# DataFrame: Two-dimensional, heterogeneous tabular data structure with labeled axes (rows and columns). like a dict-like container for Series objects.
+# Series: Series is the datastructure for a single column of a DataFrame
+
+# Arrays VS Dataframe
+# Arrays: can have any number of dimensions, but every entry has to have the same type.e.g. represent a 2 x 2 x 2 tensor, you need an array
+# Data frames: are two-dimensional, but each column is allowed to have its own type.e.g. mix numerical and categorical data, you need a data-frame.
+
+
+# import
+import numpy as np
+import pandas as pd
+from pandas import Series,DataFrame
+from numpy.random import randn
+
+# REINDEX
+# create array
+ser1 = np.arange(25)
+#create a list within an int range
+lst = range(1,6)
+# create series with assigned index
+ser1 = Series([1,2,3,4],index = ['A','B','C','D'])
+# Reindex a series
+ser2 = ser1.reindex(['A','B','C','D','E','F'])
+# Reindex assigning unmatched index a value
+ser2.reindex(['A','B','C','D','E','F','G'], fill_value=0)
+# reindex with new list of index, fill extra rows with repetitive values as the previous row
+ser3.reindex(lst3,method='ffill')
+# select data by index from dataframe and assign with column names
+ser4.ix[[2,3,4],['col2','col3']]
+# select data by row and reassgin column names
+ser4.ix[[2,3,4],col2
+# index and columns numbers must align with the fields
+df3 = DataFrame(ser1.reshape(5,5), index = lst, columns = col
+
+# DROP VALUE BY INDEX OR COLUMN
+# create series with auto increment integer till 3 with assigned index
+ser1 = Series(np.arange(3), index = ['A','B','C'])
+# create dataframe from series with assigned index (row name) and column
+df1 = DataFrame(np.arange(9).reshape((3,3)), index = ['SF','LA','NY'], columns= ['pop','sizse','year'])
+# drop row by index
+df2 = df1.drop('LA')
+# drop column, must specify axix num
+df3 = df1.drop('sizse', axis=1)
