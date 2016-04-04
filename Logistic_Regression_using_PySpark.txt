@@ -1,0 +1,49 @@
+'''
+Run PySpark with following command
+./pyspark --packages com.databricks:spark-csv_2.10:1.3.0
+'''
+
+def load_csv(hive_ctx, aschema, location):
+   	dataFrame = sqlContext.read.format("com.databricks.spark.csv")\
+       .option("header", "false")\
+       .option("delimiter", "\t")\
+       .schema(aschema)\
+       .load(location)
+	return dataFrame
+
+from pyspark.sql.types import *
+visitSchema = StructType([StructField("userId", LongType(), True), \
+      StructField("gender", StringType(), True), \
+      StructField("adSpaceId", LongType(), True), \
+      StructField("frequency", LongType(), True)])
+
+vlocation = "file:///opt/spark-temp/demography-models/data/known-gender-set/"
+gender = load_csv(sqlContext, visitSchema, vlocation)
+
+adspaces = gender.select("adSpaceId").distinct().map(lambda t: t["adSpaceId"]).collect()
+observations=gender.map(lambda r : ((r["userId"], r["gender"]), (r["adSpaceId"], r["frequency"]))).groupByKey()
+
+from pyspark.mllib.linalg import Vectors
+from pyspark.mllib.regression import LabeledPoint
+
+def mobservations(o):
+	features = []
+	for t in o[1]:
+		features.append((adspaces.index(t[0]), t[1]))
+	featureVector = Vectors.sparse(len(adspaces), features)
+	lp = LabeledPoint(1 if o[0][1].lower() == 'male' else 0, featureVector)
+	return lp
+
+knownPoints = observations.map(mobservations)
+splits = knownPoints.randomSplit([0.60, 0.40], seed = 11L)
+training = splits[0].cache()
+test = splits[1].cache()
+
+from pyspark.mllib.classification import LogisticRegressionWithLBFGS
+model = LogisticRegressionWithLBFGS.train(data=training, iterations=100, regParam=0.01, regType='l2', corrections=20)
+
+predictionAndActuals = test.map(lambda t: (model.predict(t.features), t.label))
+total = predictionAndActuals.count()*1.0
+found = predictionAndActuals.filter(lambda (p,a): p==a).count()*1.0
+
+print("Precision=" + str(found/total))

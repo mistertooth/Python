@@ -1,0 +1,17 @@
+# initialize local dir as git repo
+git init
+
+# add files to local repo
+git add .
+
+# commit files staged in local repo
+git commit -m “first commit”
+
+# copy the remote repo URL 
+git remote add origin https://github.com/mistertooth/Python.git
+
+# Verifies the new remote URL
+git remote -v
+
+# Pushes changes in local repo up to the remote repo specified as the origin
+git push origin master
