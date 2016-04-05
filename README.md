@@ -1,3 +1,0 @@
-# Python
-python scripts
-# something

@@ -1,6 +1,9 @@
 # python_sql
 
 # import lib
+import pandas as pd
+import numpy as np
+from pandas import *
 import psycopg2 as pg
 import pandas.io.sql as psql
 
