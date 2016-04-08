@@ -1,0 +1,28 @@
+#creates a default session
+screen
+#creates a session with a name
+screen -S name
+#detach from the current screen session you are in
+Ctrl-a d
+#when the command screen is running in another terminal remote detach
+screen -d SCREENID
+#it will list all the existing screen sessions
+screen -ls
+#attaches to default session. this works only if you have one screen session
+screen -r
+#attaches to particular screen session
+screen -r <SCREENID>
+#attaches to specific session (unique name
+screen -r name
+#kill attached screen it will ask "Really kill his window [y/n]". y for yes, n for no
+CTRL-a k
+#kill detached screen
+screen -X -S SCREENID quit
+#-L Tell screen to turn on automatic output logging for the windows.
+screen -L
+#Ctrl-a + H to save logs into screenlog.n file. One more Ctrl-a + H to turn off
+#read screenlog.n file
+cat /home/dasunhegoda/screenlog.0
+less -r /home/dasunhegoda/screenlog.0
+#it will lock your screen session quickly while you are in the screen session
+CTRL-a x
