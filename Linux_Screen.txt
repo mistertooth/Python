@@ -18,6 +18,17 @@ screen -r name
 CTRL-a k
 #kill detached screen
 screen -X -S SCREENID quit
+# reattach a screen 
+screen -x SCREENNAME
+# detach everything
+screen -d
+
+
+
+
+
+
+
 #-L Tell screen to turn on automatic output logging for the windows.
 screen -L
 #Ctrl-a + H to save logs into screenlog.n file. One more Ctrl-a + H to turn off

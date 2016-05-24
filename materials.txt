@@ -1,0 +1,46 @@
+
+# MACHINE LEARNING
+Andrew Ng in pythohn
+http://www.holehouse.org/mlclass/
+
+// Linear Regression with sklearn
+https://github.com/mistertooth/DAT8/blob/master/notebooks/10_linear_regression.ipynb
+// Regression models
+http://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/
+// Tree 
+http://www.analyticsvidhya.com/blog/2016/04/complete-tutorial-tree-based-modeling-scratch-in-python/#five
+// **Regression, linear and nonlinear using regression and tree
+https://github.com/rasbt/python-machine-learning-book/blob/master/code/ch10/ch10.ipynb
+// **Machine learning full 
+https://github.com/mistertooth/python-machine-learning-book/tree/master/code
+// Non-linear LEAST SQUARE MINIZATION and Curve Fitting for Python
+http://lmfit-py.readthedocs.io/en/latest/intro.html
+// ORDINARY LEAST SQUARES with Statsmodel
+http://statsmodels.sourceforge.net/devel/examples/generated/example_ols.html
+// Multiple regression with Statsmodel
+https://www.datarobot.com/blog/multiple-regression-using-statsmodels/
+
+# DEEP LEARNING
+https://github.com/mistertooth/intro2deeplearning/tree/master/notebooks
+
+# VISUALIZATION
+Sqlite & Plotly
+https://plot.ly/python/big-data-analytics-with-pandas-and-sqlite/
+
+
+# STATISTICS
+https://github.com/mistertooth/intro2stats/blob/master/notebooks/1.%20Introduction.ipynb
+https://github.com/mistertooth/statsintro_python/tree/master/ipynb
+https://github.com/rouseguy/intro2stats/tree/master/notebooks
+
+# DATA ANAYSIS
+// full process demo of data analysis
+https://github.com/amitkaps/weed
+
+# FEATURE ENGINEERING
+http://www.analyticsvidhya.com/blog/2016/01/guide-data-exploration/
+
+
+
+
+
