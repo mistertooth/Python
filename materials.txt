@@ -1,7 +1,18 @@
+# Generic
+http://nealcaren.github.io/python-tutorials/
+https://github.com/szwed/awesome-machine-learning-python
+
+# BEST
+//http://blog.datadive.net/
+
+
 
 # MACHINE LEARNING
 Andrew Ng in pythohn
 http://www.holehouse.org/mlclass/
+
+# Method overview !!!
+http://blog.datadive.net/7-tools-in-every-data-scientists-toolbox/
 
 // Linear Regression with sklearn
 https://github.com/mistertooth/DAT8/blob/master/notebooks/10_linear_regression.ipynb
@@ -26,12 +37,21 @@ https://github.com/mistertooth/intro2deeplearning/tree/master/notebooks
 # VISUALIZATION
 Sqlite & Plotly
 https://plot.ly/python/big-data-analytics-with-pandas-and-sqlite/
+Cufflinks
+https://github.com/jmportilla/cufflinks/blob/master/Cufflinks%20Tutorial%20-%20Plotly.ipynb
 
 
 # STATISTICS
 https://github.com/mistertooth/intro2stats/blob/master/notebooks/1.%20Introduction.ipynb
 https://github.com/mistertooth/statsintro_python/tree/master/ipynb
 https://github.com/rouseguy/intro2stats/tree/master/notebooks
+// CHI2 chi square !!!
+http://hamelg.blogspot.se/2015/11/python-for-data-analysis-part-25-chi.html
+/// Man-Whitney-Wilcoxon, ANOVA!!!
+http://www.randalolson.com/2012/08/06/statistical-analysis-made-easy-in-python/
+
+
+
 
 # DATA ANAYSIS
 // full process demo of data analysis
@@ -39,8 +59,98 @@ https://github.com/amitkaps/weed
 
 # FEATURE ENGINEERING
 http://www.analyticsvidhya.com/blog/2016/01/guide-data-exploration/
+# Feature ranking
+http://blog.datadive.net/selecting-good-features-part-iii-random-forests/
 
 
+# Classification
+// !!! unbalanced class in SVM & Tree/Forest
+http://bigdataexaminer.com/data-science/dealing-with-unbalanced-classes-svm-random-forests-and-decision-trees-in-python/
+/// multiclass classification KNN
+https://github.com/jmportilla/Udemy---Machine-Learning/blob/master/Multi-Class%20Classification.ipynb
 
+# Model Evaluation
+/// !!! Resampling
+http://machinelearningmastery.com/evaluate-performance-machine-learning-algorithms-python-using-resampling/
+/// Choose the right option 
+http://machinelearningmastery.com/how-to-choose-the-right-test-options-when-evaluating-machine-learning-algorithms/
 
+# Supervised Learning
+// !!! Cheat Sheet
+https://github.com/rcompton/ml_cheat_sheet/blob/master/supervised_learning.ipynb
 
+# Theory
+// Bias Variance Tradeoff
+https://en.wikipedia.org/wiki/Bias%E2%80%93variance_tradeoff
+// Precision and Recall
+https://en.wikipedia.org/wiki/Precision_and_recall
+
+# Decision Tree & Random Forest
+// intro nice vis
+https://github.com/jmportilla/Udemy---Machine-Learning/blob/master/Decision%20Trees%20and%20Random%20Forests.ipynb
+
+# Logistic Regression
+/// intro
+https://github.com/jmportilla/Udemy---Machine-Learning/blob/master/Supervised%20Learning%20-%20Logistic%20Regression.ipynb
+
+# Support Vector Machine
+/// intro
+https://github.com/jmportilla/Udemy---Machine-Learning/blob/master/Support%20Vector%20Machines.ipynb
+
+# 
+/// Bagging, Boosting, Stacking
+http://stats.stackexchange.com/questions/18891/bagging-boosting-and-stacking-in-machine-learning
+
+# spark
+http://nbviewer.jupyter.org/github/ofermend/IPython-notebooks/blob/master/blog-part-2.ipynb
+// map, log, forest
+http://nbviewer.jupyter.org/github/ofermend/IPython-notebooks/blob/master/crime-event-demo-meetup.ipynb
+https://github.com/ogrisel/notebooks/blob/master/Distributed%20Learning%20of%20Extra%20Trees%20with%20IPython.parallel.ipynb
+
+#survey results classifciation
+/// !!! sum, forest, log
+https://github.com/rebeccabilbro/titanic/blob/master/titanicML_workshop.ipynb
+https://github.com/rebeccabilbro/machine-learning/blob/master/notebook/Wheat%20Classification.ipynb
+/// !!! multiple models and full process
+http://bugra.github.io/work/notes/2014-11-22/an-introduction-to-supervised-learning-scikit-learn/
+/// full process
+http://nbviewer.jupyter.org/github/rhiever/Data-Analysis-and-Machine-Learning-Projects/blob/master/example-data-science-notebook/Example%20Machine%20Learning%20Notebook.ipynb#Step-5:-Classification
+/// same as above
+https://github.com/rhiever/Data-Analysis-and-Machine-Learning-Projects/blob/master/example-data-science-notebook/Example%20Machine%20Learning%20Notebook.ipynb
+/// !!! log reg, forest, confusion matrix
+http://nbviewer.jupyter.org/github/ofermend/IPython-notebooks/blob/master/blog-part-1.ipynb
+/// log inn forest bayes sum
+http://machinelearningmastery.com/get-your-hands-dirty-with-scikit-learn-now/
+/// log reg vs forest sclearn
+http://www.analyticsvidhya.com/blog/2015/09/random-forest-algorithm-multiple-challenges/
+/// pseudo data sk learn forest
+https://github.com/mistertooth/data-science-ipython-notebooks/blob/master/scikit-learn/scikit-learn-random-forest.ipynb
+/// explain random forest in sklearn
+http://blog.datadive.net/random-forest-interpretation-with-scikit-learn/
+/// simple but incomplete logistic regression
+https://github.com/mistertooth/DAT8/blob/master/notebooks/12_logistic_regression.ipynb
+https://github.com/amueller/scipy_2015_sklearn_tutorial/blob/master/notebooks/02.1%20Supervised%20Learning%20-%20Classification.ipynb
+/// simple but incomplete decision tree, good vis!!!
+https://github.com/mistertooth/DAT8/blob/master/notebooks/17_decision_trees.ipynb
+/// statistical tests categorical data
+https://github.com/mistertooth/statsintro_python/blob/master/ipynb/9_testsCategorical.ipynb
+/// logistic regression
+https://github.com/hallr/DAT_SF_19/blob/master/labs/07-Logistic_Regression.ipynb
+/// knn for multiclass 
+https://github.com/JSP110/Udemy-Python-Visualisation-Course/blob/master/Multi-Class%20Classification.ipynb
+/// classification with gaussion babes
+https://github.com/jakevdp/sklearn_scipy2013/blob/master/notebooks/04.1_supervised_classification.ipynb
+/// measure performance KNN classification
+https://github.com/jakevdp/sklearn_scipy2013/blob/master/notebooks/
+04.3_measuring_prediction_performance.ipynb
+https://github.com/amueller/scipy_2015_sklearn_tutorial/blob/master/notebooks/01.4%20Training%20and%20Testing%20Data.ipynb
+/// svm
+https://github.com/jakevdp/sklearn_scipy2013/blob/master/notebooks/07.1_in_depth_with_SVMs.ipynb
+/// tree
+https://github.com/amueller/scipy_2015_sklearn_tutorial/blob/master/notebooks/05.3%20In%20Depth%20-%20Trees%20and%20Forests.ipynb
+/// dimensionality reduction
+https://github.com/hallr/DAT_SF_19/blob/master/labs/15-Dimensionality_Reduction.ipynb
+/// model evaluation
+http://blog.yhat.com/posts/predicting-customer-churn-with-sklearn.html
+/// parameter tuning
+http://machinelearningmastery.com/how-to-tune-algorithm-parameters-with-scikit-learn/

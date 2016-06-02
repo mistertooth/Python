@@ -19,6 +19,31 @@ from numpy.random import randn
 import matplotlib.pyplot as plt
 import seaborn
 
+# FACTORIZE
+import pandas as pd
+df = pd.DataFrame({'x': [1, 1, 2, 2, 1, 1], 'y':[1, 2, 2, 2, 2, 1]})
+print pd.factorize(pd.lib.fast_zip([df.x, df.y]))[0]
+test=pd.factorize(intent.intent, sort=True)[0]
+print intent.intent.head(10)
+print test[:10]
+
+from sklearn import preprocessing
+le = preprocessing.LabelEncoder()
+le.fit(trans.apptypegroupid)
+trans1['apptypegroup_dum']=le.transform(trans.apptypegroupid)
+
+# SORT
+np.sort(intent.intent.unique())
+# CATEGORY
+cat=np.sort(intent.intent.unique())
+intent_cat=pd.Categorical(intent.intent, categories=cat, ordered=True)
+pd.Series(intent_cat)
+intent.intent.astype('category', categories=np.sort(intent.intent.unique()), ordered=True)
+
+# MERGE
+# join multiple dataframes
+dfs= [total,as_cat ,ad_cat ,adsize, contype, speed,screensize,apptypegroup,browser,num]
+trans_final = reduce(lambda left,right: pd.merge(left,right,how='inner', on='answersetid', sort=True, copy=True), dfs)
 
 # REINDEX
 # create array
@@ -39,6 +64,27 @@ ser4.ix[[2,3,4],['col2','col3']]
 ser4.ix[[2,3,4],col2
 # index and columns numbers must align with the fields
 df3 = DataFrame(ser1.reshape(5,5), index = lst, columns = col
+
+# calculate the correlation matrix (ignore id fields)
+df=recall.copy()
+df_corr= df.drop(['recall','recall_cate'], axis=1).corr(method='spearman')
+
+# create a mask to ignore self-
+# FANCY INDEXING
+mask = np.ones(df_corr.columns.size) - np.eye(df_corr.columns.size)
+df_corr = mask * df_corr
+sns.heatmap(df_corr)
+
+# lATEX
+$$a = b + c$$
+
+# EQUALS
+# compare if 2 dataframe equals to each other
+Series(total.index).equals(Series(contype.index))
+
+# Display video
+from IPython.display import YouTubeVideo
+YouTubeVideo("hcDb12fsbBU")
 
 # DROP VALUE BY INDEX OR COLUMN
 # create series with auto increment integer till 3 with assigned index
@@ -186,7 +232,9 @@ df2 = crosstab(df1.A, df1.B)
 # http://pbpython.com/pandas-pivot-table-explained.html
 pd.pivot_table(df,index=["Manager","Rep"],values=["Price"],aggfunc=[np.mean,len])
 
-
+#difference in columns between 2 dataframes
+interest_col=interest.columns.difference(recall.columns)
+intent_col=intent.columns.difference(recall.columns)
 
 # VISUALIZATION
 # seaborn
